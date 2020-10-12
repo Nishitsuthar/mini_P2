@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<title>Contact Us</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/design.css') }}">
+</head>
+
+<body>
+		
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo"><img src="{{ url_for('static',filename='img/kul.png') }}" alt="logo"></div>
+			<li> <a href="/"> Home</a> </li>
+			<li> <a href="/about"> About</a> </li>
+			<li> <a href="/contact_us"> Contact</a> </li>
+			<li> <a href="/friends"> Query</a> </li>
+		</ul>
+		<div class="rightNav">
+			<input type="text" name="search" id="search">
+			<button class="btn btn-$m">search</button>
+			<button class="btn btn-$m">login</button>
+
+
+		</div>
+	</nav>
+	<br><br><br>
+	<p>
+		Have questions? I have answers.<br><br>
+		Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!<br><br>
+	</p>
+	<div>
+		<form action="/contact_us" method="post">
+			<label>Name</label><br>
+			<input type="text" name="name" 	id="name" placeholder="Full Name"><br>
+			<label>E-mail</label><br>
+			<input type="email" name="email" id="email" placeholder="E-mail"><br>
+			<label>Mobile no.</b></label><br>
+			<input type="tel" name="mobile" id="mobile" placeholder="Mobile no"><br>
+			<label>Message</label><br>
+			<textarea rows="5" class="form-control" placeholder="Message" id="message" name="message" required data-validation-required-message="Please enter a message."></textarea><br>
+			<input type="submit" name="submit">
+			<input type="reset" name="reset">
+		</form>
+	</div>
+	<br>
+	<br>
+	<br>
+	<hr>
+	
+			
+</body>
+</html>

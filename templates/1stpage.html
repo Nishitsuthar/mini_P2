@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>
+		Blog_z_All
+	</title>
+</head>
+<body>
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo"><img src="{{ url_for('static',filename='img/kul.png') }}" alt="logo"></div>
+			<li> <a href="/"> Home</a> </li>
+			<li> <a href="/about"> About</a> </li>
+			<li> <a href="/contact_us"> Contact</a> </li>
+			<li> <a href="/friends"> Query</a> </li>
+		</ul>
+		<div class="rightNav">
+			<input type="text" name="search" id="search">
+			<button class="btn btn-$m">search</button>
+			<button class="btn btn-$m">login</button>
+
+
+		</div>
+	</nav>
+	<section class="background firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<p class="text-big">the future of education is here</p>
+				<p class="text-small">This makes it easy for you to start your own blog.
+Signup for free to start sharing your ideas
+				<div class="buttons">
+					<button class="btn">start blog</button>
+					
+
+				</div>
+
+			</div>
+			<div class="secondHalf">
+				<img src="{{ url_for('static',filename='img/bg.jpg') }}" alt="background image">
+			</div>
+
+		</div>
+		
+	</section>
+	<section class="section">
+		<div class="paras">
+		<p class="sectionTag text-big">The end of your search if here</p>
+		<p class="sectionSubTag text-small">lorem3444</p>
+	</div>
+		<div class="thumbnail">
+			<img src="{{ url_for('static',filename='img/bg.jpg') }}" alt="laptop image" class="imgFluid">
+		</div>
+	</section>
+	<section class="section section-left">
+		<div class="paras">
+		<p class="sectionTag text-big">The end of your search if here</p>
+		<p class="sectionSubTag text-small">lorem3444</p>
+	</div>
+		<div class="thumbnail">
+			<img src="{{ url_for('static',filename='img/bg.jpg') }}" alt="laptop image" class="imgFluid">
+		</div>
+	</section><section class="section">
+		<div class="paras">
+		<p class="sectionTag text-big">The end of your search if here</p>
+		<p class="sectionSubTag text-small">lorem3444</p>
+	</div>
+		<div class="thumbnail">
+			<img src="{{ url_for('static',filename='img/bg.jpg') }}" alt="laptop image" class="imgFluid">
+		</div>
+	</section>
+</body>
+</html>
