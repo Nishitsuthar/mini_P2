@@ -5,7 +5,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost/blogzdaily'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost/friends'
 db = SQLAlchemy(app)
 
 
@@ -35,7 +35,7 @@ def friends():
             return "there was a error"
     else:
         friends = Friends.query.order_by(Friends.date_created)
-        return render_template('friends.html',friends=friends)
+        return render_template('friends.html', friends=friends)
 
 @app.route("/")
 def home():
@@ -91,6 +91,7 @@ class Friends(db.Model):
     date_created = db.Column(db.DateTime, default = datetime.utcnow())
 
     def __repr__(self):
-        return '<Name %r' % self.id
+        return '<Name %r>' % self.id
 
 app.run(debug=True)
+
